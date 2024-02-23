@@ -1,3 +1,5 @@
+use alloc::vec::Vec;
+
 use super::{
     AstSerdeOptions, CodeBody, Felt, Instruction, LocalProcMap, ModuleAst, Node, ParsingError,
     ProcedureAst, ProcedureId, ProcedureName, ProgramAst, SourceLocation, Token,

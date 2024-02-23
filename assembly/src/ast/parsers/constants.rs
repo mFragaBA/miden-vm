@@ -298,6 +298,7 @@ mod tests {
         },
         ONE,
     };
+    use alloc::string::ToString;
     use Operation::*;
 
     #[test]

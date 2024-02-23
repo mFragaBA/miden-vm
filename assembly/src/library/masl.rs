@@ -119,8 +119,12 @@ impl MaslLibrary {
 
 #[cfg(feature = "std")]
 mod use_std {
-    use super::{super::super::ast::instrument, *};
-    use std::{fs, io, path::Path};
+    use super::*;
+    use crate::{
+        ast::{instrument, ModuleAst},
+        BTreeMap,
+    };
+    use std::{fs, io, path::Path, string::ToString};
 
     impl MaslLibrary {
         /// Read a directory and recursively create modules from its `masm` files.
