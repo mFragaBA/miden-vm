@@ -1,6 +1,10 @@
-#![cfg_attr(not(feature = "std"), no_std)]
+#![no_std]
 
+#[macro_use]
 extern crate alloc;
+
+#[cfg(feature = "std")]
+extern crate std;
 
 /// This is an implementation of `std::assert_matches::assert_matches`
 /// so it can be removed when that feature stabilizes upstream
@@ -81,6 +85,9 @@ pub use math::{
     fields::{f64::BaseElement as Felt, QuadExtension},
     polynom, ExtensionOf, FieldElement, StarkField, ToElements,
 };
+
+#[cfg(feature = "formatter")]
+pub mod prettier;
 
 mod program;
 pub use program::{blocks as code_blocks, CodeBlockTable, Kernel, Program, ProgramInfo};
