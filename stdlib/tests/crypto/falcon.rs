@@ -46,6 +46,7 @@ fn falcon_prove_verify() {
     assert!(result.is_ok(), "error: {result:?}");
 }
 
+#[allow(clippy::type_complexity)]
 fn generate_test(
     keypair: KeyPair,
     message: Word,
