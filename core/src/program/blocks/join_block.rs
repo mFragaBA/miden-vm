@@ -5,7 +5,8 @@ use crate::utils::boxed::*;
 // ================================================================================================
 /// Block for sequential execution of two sub-blocks.
 ///
-/// Executes left sub-block then the right sub-block. Fails if either of the sub-block execution fails.
+/// Executes left sub-block then the right sub-block. Fails if either of the sub-block execution
+/// fails.
 ///
 /// The hash of a join block is computed as:
 ///
